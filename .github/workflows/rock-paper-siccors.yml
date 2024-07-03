@@ -10,7 +10,7 @@ jobs:
       runs-on: ubuntu-latest
       defaults:
         run:
-          working-directory: src/machine-learning-with-python/rock-paper-scissors
+          working-directory: rock-paper-scissors
       steps:
         - uses: actions/checkout@v4
         - name: Install Python
