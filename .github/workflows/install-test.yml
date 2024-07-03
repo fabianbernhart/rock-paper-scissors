@@ -1,16 +1,12 @@
-name: CI
+name: install & test
 on:
     push:
       branches:
         - master
     pull_request:
-
 jobs:
     setup:
       runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: src/machine-learning-with-python/rock-paper-scissors
       steps:
         - uses: actions/checkout@v4
         - name: Install Python
@@ -24,7 +20,7 @@ jobs:
         - name: Setup a local virtual environment (if no poetry.toml file)
           run: |
             poetry config virtualenvs.create true --local
-            poetry config virtualenvs.in-project true --local
+            poetry config virtualenvs.in-project true
         - uses: actions/cache@v3
           name: Define a cache for the virtual environment based on the dependencies lock file
           with:
@@ -34,4 +30,3 @@ jobs:
           run: poetry install
         - name: run pytest
           run: poetry run pytest -v
-        
