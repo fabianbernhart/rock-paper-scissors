@@ -9,20 +9,27 @@ jobs:
     setup:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v4
         - name: Install Python
           uses: actions/setup-python@v4
           with:
             python-version: "3.11"
+        
         - name: Install poetry
           with:
             poetry-version: latest
           uses: abatilo/actions-poetry@v2
-        - name: Setup a local virtual environment (if no poetry.toml file)
+        
+        - name: Setup a local virtual environment
           run: |
             poetry config virtualenvs.create true --local
             poetry config virtualenvs.in-project true --local
+        
+        - name: Cache dependencies
         - uses: actions/cache@v3
+          with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+        
         - name: Install the project dependencies
           run: poetry install
         - name: run pytest
