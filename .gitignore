@@ -1,0 +1,124 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Poetry specific
+poetry.lock
+.cache/
+.pdm.toml
+.pdm-python/
+.pdm.lock
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.*
+.venv
+.venv/
+.env/
+env/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Profiling data
+.prof
+
+# pytype static type analyzer
+.pytype/
+
+# PyCharm
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# Local history for IntelliJ-based IDEs
+.idea
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Windows 10 upgrade
+$WINDOWS.~BT/
+$RECYCLE.BIN/
+
+# Windows 10 set-up files
+*.cab
+*.msu
+*.regtrans-ms
+*.jrs
+*.apx
+
+# Linux
+*.lock
+*~
+
+# Logs
+logs/
+*.log
+
+# Temp files
+*.tmp
+*.temp
+tmp/
+temp/
